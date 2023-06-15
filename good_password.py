@@ -79,9 +79,8 @@ def generate_password(length, chars):
     Returns:
         str: The generated password.
     """
-    password = ''
-    for i in range(length):
-        password += random.choice(chars)
+    password = str(random.choice(chars) for _ in range(length))
+
     return password
 
 for i in range(q1):
